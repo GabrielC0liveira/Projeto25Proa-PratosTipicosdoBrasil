@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+h1{
+    text-align: center;
+    margin-top: 100px;
+    color: chocolate;
+    font-size: 45px;
+}
+p{
+    text-align: center;
+    color: rgb(90, 45, 14);
+    font-size: 20px;
+}
+body{
+    background-color: bisque;
+}
+.carrossel{
+    margin: 100px auto;
+    width: 90%;
+    display: flex;
+    overflow-x: auto;
+    gap: 1em;
+}
+.carrossel::-webkit-scrollbar{
+    display: none;
+}
+.grupo{
+   display: flex;
+    align-items: center;
+    flex-shrink: 0; 
+    gap: 1em;
+    animation: spin 10s infinite linear;
+}
+.cartao{
+    
+  width: 300px;      
+    height: 250px;     
+    padding: 0;        
+    background: cornflowerblue;
+    border-radius: .2em;
+    overflow: hidden;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cartao img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;    
+    border-radius: .1em;
+}
+@keyframes spin{
+    from {translate: 0;}
+    to {translate: -100%;}
+}
